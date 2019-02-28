@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="cssPagina.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src = "Jquery.js"></script>
+    <title>Ejercicio 1</title>
+  </head>
+  <body>
+
+	<div class="row">
+  		<div class="column">
+    		<img src="https://www.superpizza.es/wp-content/uploads/2018/05/Coca-Cola-lata-33cl.jpg" alt="cocaocla" width="200px" height="200px" style="width:100%" class="img-responsive" id="cocacola">
+  		</div>
+  		<div class="column">
+    		<img src="https://www.pepsi.com/en-us/uploads/images/can-pepsi.png?mtime=20180110134757" alt="pepsi" style="width:100%" width="200px" height="200px" class="img-responsive" id="pepsi">
+  		</div>
+
+	</div> 
+			<div class="container" id="colatabs" style="display:none">
+
+				<ul class="tabs">
+					<li class="tab-link current" data-tab="tab-1">Precio</li>
+					<li class="tab-link" data-tab="tab-2">Imagen</li>
+					<li class="tab-link" data-tab="tab-3">Descripcion</li>
+					
+				</ul>
+					
+						<div id="tab-1" class="tab-content current">
+							<p>Cada Cocacola cuesta 1,5€</p
+
+							<p>Cantidad: <input type="text" id="cantidadCocacolas" value=""></p>
+
+						</div>
+						<div id="tab-2" class="tab-content">
+							 
+							<div class="row">
+							  		<div class="column" >
+							    		<img src="https://www.superpizza.es/wp-content/uploads/2018/05/Coca-Cola-lata-33cl.jpg" alt="cocaocla" class="cocacolaImagen" width="100px" height="100px" style="width:100%" class="img-responsive">
+							  		</div>
+							  		<div class="column" >
+							    		<img src="https://www.superpizza.es/wp-content/uploads/2018/05/Coca-Cola-lata-33cl.jpg" class="cocacolaImagen" alt="cocaocla" width="100px" height="100px" style="width:100%" class="img-responsive">
+							  		</div>
+							  		<div class="column">
+							    		<img src="https://www.superpizza.es/wp-content/uploads/2018/05/Coca-Cola-lata-33cl.jpg" alt="cocaocla" width="100px" height="100px" style="width:100%" class="cocacolaImagen" class="img-responsive">
+							  		</div>
+							</div> 
+
+						</div>
+						<div id="tab-3" class="tab-content">
+							Esto es una lata de cocacola de 33cl. Se trata de una bebida con gas muy refrescante y popular, su principal competidor es pepsi.
+							<p>total de Cocacolas: <b id="totalCocacolas">0</b></p>
+						</div>
+				
+			</div><!-- container -->
+			<div class="container" id= "pepsitabs" style="display:none">
+
+				<ul class="tabs">
+					<li class="tab-link current" data-tab="tab-4">Precio</li>
+					<li class="tab-link" data-tab="tab-5">Imagen</li>
+					<li class="tab-link" data-tab="tab-6">Descripcion</li>
+					
+				</ul>
+					
+						<div id="tab-4" class="tab-content current">
+							<p>Cada pepsi cuesta 2€</p>
+							<p>Cantidad: <input type="text" id="cantidadPepsis" value=""></p>
+						</div>
+						<div id="tab-5" class="tab-content">
+						 	<div class="row">
+							  		<div class="column" >
+							    		<img src="https://www.pepsi.com/en-us/uploads/images/can-pepsi.png?mtime=20180110134757" alt="cocaocla" class="pepsiImagen" width="100px" height="100px" style="width:100%" class="img-responsive">
+							  		</div>
+							  		<div class="column" >
+							    		<img src="https://www.pepsi.com/en-us/uploads/images/can-pepsi.png?mtime=20180110134757" class="pepsiImagen" alt="cocaocla" width="100px" height="100px" style="width:100%" class="img-responsive">
+							  		</div>
+							  		<div class="column">
+							    		<img src="https://www.pepsi.com/en-us/uploads/images/can-pepsi.png?mtime=20180110134757" alt="cocaocla" width="100px" height="100px" style="width:100%" class="pepsiImagen" class="img-responsive">
+							  		</div>
+							</div> 
+
+						</div>
+						<div id="tab-6" class="tab-content">
+							Esto es una lata de Pepsi de 33cl. Se trata de una bebida con gas muy refrescante y popular, su principal competidor es Cocacola.
+								<p>total de pepsis: <b id="totalPepsis">0</b></p>
+						</div>
+				
+						
+				
+			</div>
+			<div class = "container">
+				<p>Total:</p><a id="totalTodo">0€</a>
+			
+
+				<br>
+
+				<button class="botonAjax">títulos</button>
+				<p class = "titulos"></p>
+				<p class = "body"></p>
+				<img class="imagen1"></img>
+				<p class = "titulos1"></p>
+				<p class = "body1"></p>
+				<img class = "imagen2"></img>
+				<p class = "titulos2"></p>
+				<p class = body2></p>
+				<img class="imagen3"></img>
+			</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
