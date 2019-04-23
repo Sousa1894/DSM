@@ -1,0 +1,28 @@
+.enLinea{
+    padding: 20px;
+    display: inline;
+}
+.elemento{
+    margin: 10px;
+    display: inline;
+}
+.cantidad{
+    
+    display: inline;
+}
+.imagen{
+    
+    margin: 10px;
+    display: inline;
+}
+.total{
+    padding:0.5%;
+    float: right;
+}
+.totalNumero{
+    
+    float: right;
+}
+.totalFinal{
+    margin-left: 45%;    
+}
