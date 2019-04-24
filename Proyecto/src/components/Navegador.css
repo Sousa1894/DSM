@@ -3,3 +3,13 @@
     top:0;
     width: 100%;
 }
+.margen-mr{
+    margin-right: 0.5%;
+}
+.margen-ml{
+    margin-left: 0.5%;
+}
+.inline{
+    display: inline;
+
+}

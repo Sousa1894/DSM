@@ -24,5 +24,11 @@
     float: right;
 }
 .totalFinal{
-    margin-left: 45%;    
+    
+    display: inline;
+    margin-left: 0.5%;
+}
+.botonIzq{
+    display: inline;
+    margin-left: 45%;
 }
