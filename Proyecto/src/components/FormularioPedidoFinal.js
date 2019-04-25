@@ -16,7 +16,8 @@ class FormularioPedidoFinal extends Component {
       totalFinal:this.props.location.state.totalFinal,
       cantidad:this.props.location.state.cantidad,
       nombreGuantillas:this.props.location.state.nombreGuantillas,
-      infoProducto:this.props.location.state.infoProducto
+      infoString:this.props.location.state.infoString
+    
       
     }
 
@@ -29,7 +30,8 @@ class FormularioPedidoFinal extends Component {
         totalFinal: this.state.totalFinal,
         cantidad:this.state.cantidad,
         nombreGuantillas:this.state.nombreGuantillas,
-        infoProducto:this.state.infoProducto
+        infoString:this.state.infoString
+        
     };
     axios.post('/pedidos.json', data)
         .then(response => {
@@ -62,7 +64,7 @@ class FormularioPedidoFinal extends Component {
 
         }}
         >RealizarPedido </Link></Button>
-        {console.log(this.state.infoProducto)}
+       
       </div>
     );
   }

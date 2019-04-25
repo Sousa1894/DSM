@@ -15,6 +15,7 @@ class AvisoRealizarPedido extends Component {
       totalFinal:this.props.location.state.totalFinal,
       cantidad:this.props.location.state.cantidad,
       nombreGuantillas:this.props.location.state.nombreGuantillas,
+      infoString:''
       
     }
 
@@ -25,10 +26,23 @@ class AvisoRealizarPedido extends Component {
     console.log(this.state.cantidad);
     console.log(this.state.totalFinal);
     console.log(this.state.nombreGuantillas);
-    
+    this.sendS();
 
   }
+  
 
+
+  sendS=()=>{
+    var s = '';
+    var nombre = this.state.nombreGuantillas;
+    var cantidad = this.state.cantidad;
+    var valor = this.state.guantillas;
+    var total = this.state.total;
+    for(var i=0;i<cantidad.length;i++){
+      s = s+" Has seleccionado "+cantidad[i]+" unidades de guantillas "+nombre[i]+" a "+valor[i].precio+" € la unidad haciendo un total de "+total[i]+" €\n";
+    }
+    this.setState({infoString:s});
+  }
   
 
   render() {
@@ -38,11 +52,14 @@ class AvisoRealizarPedido extends Component {
     var valor = this.state.guantillas;
     var total = this.state.total;
     var info = [];
+    
+    
         for(var i=0;i<cantidad.length;i++){
           info[i] = (
             <p>Has seleccionado {cantidad[i]} unidades de guantillas {nombre[i]} a {valor[i].precio}€ la unidad haciendo un total de {total[i]}€</p>
             
           );
+         
         }
     
     
@@ -82,13 +99,14 @@ class AvisoRealizarPedido extends Component {
               total:this.state.total,
               totalFinal:this.state.totalFinal,
               nombreGuantillas:this.state.nombreGuantillas,
-              infoProducto:this.state.info
+              infoString:this.state.infoString
+              
             }
 
         }}
         >Continuar </Link></Button>
         
-        
+       
         
        
        

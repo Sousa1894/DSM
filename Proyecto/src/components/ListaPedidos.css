@@ -1,0 +1,16 @@
+.collapse-css-transition {
+    transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+  .align{
+      text-align: center;
+  }
+  .listaPedidos{
+      width: 60%;
+      margin-left: 15%;
+      margin-right: 5%;
+      margin-top: 5%;
+  }
+  .botonSeguirComprando{
+      margin-left: 0.5%;
+  }
