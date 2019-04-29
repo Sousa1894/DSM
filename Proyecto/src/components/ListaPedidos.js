@@ -3,6 +3,8 @@ import axios from '../axios';
 import Collapse from '@kunukn/react-collapse';
 import './ListaPedidos.css'
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -70,7 +72,7 @@ class ListaPedidos extends Component {
     var cantidadPedidos = pedidos.length;
     
   //  var marcasGuantillas = pedidos[0].nombreGuantillas;
-    
+    console.log(pedidos);
     
     for(let i=0;i<cantidadPedidos;i++){
 
@@ -113,8 +115,20 @@ class ListaPedidos extends Component {
               </div>
               
               <Button variant="info" onClick={() => this.deleteUpdatePostHandler(pedidos[i].idb)}>borrar</Button>
-              <Button variant="info" className="botonSeguirComprando">Continuar comprando</Button> <hr></hr></div>);
-    console.log(this.state.isFalse);
+              <Button className="botonSeguirComprando" variant="info"><Link to = {{
+            pathname:"/",
+            state:{
+              cantidad: pedidos[i].cantidad,
+              total:pedidos[i].total,
+              totalFinal:pedidos[i].totalFinal,
+              nombreGuantillas:pedidos[i].nombreGuantillas
+            }
+
+        }}
+        
+        
+        
+        >Seguir comprando</Link></Button> <hr></hr></div>);
     }
 
 

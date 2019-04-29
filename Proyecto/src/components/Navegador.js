@@ -26,8 +26,7 @@ class Navegador extends Component {
     <Navbar.Brand href="#home">Guantillas</Navbar.Brand>
     <Nav className="mr-auto">
       <NavLink to="/"><b>Principal</b></NavLink>
-      <Nav.Link href="#features">hola</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
+      
     </Nav>
     <Form inline>
     <Nav className="mr-auto">

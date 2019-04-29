@@ -13,6 +13,7 @@ import  './FilaProducto.css';
 class Principal extends Component {
 
   state = {
+    
   guantillas:[],
   total:[],
   totalFinal:0,
@@ -31,24 +32,41 @@ componentDidMount () {
               idb: key
             });
           }
-          
-          var t = [];
-          var s = [];
-          var v = [];
-         ;
-          for(var i=0;i<p.length;i++){
-            t[i] = 0;
-            s[i]=0;
-            v[i]=p[i].marca;
-          }
-          this.setState({nombreGuantillas:v});
-          this.setState({cantidad:s});
-          this.setState({total:t});
+
+         /* if(this.location.state.nombreGuantillas[0]==="mizuno"){
+            console.log("hola"+this.location.state.nombreGuantillas);
+            this.setState({nombreGuantillas:this.props.location.state.nombreGuantillas});
+            this.setState({cantidad:this.props.location.state.cantidad});
+            this.setState({total:this.props.location.state.total});
+            this.setState({totalFinal:this.props.location.state.total});
+          }else{*/
+              var t = [];
+              var s = [];
+              var v = [];
+            
+              for(var i=0;i<p.length;i++){
+                t[i] = 0;
+                s[i]=0;
+                v[i]=p[i].marca;
+              }
+              this.setState({nombreGuantillas:v});
+              this.setState({cantidad:s});
+              this.setState({total:t});
           
           
           this.setState({guantillas: p});
+          var valor = this.props.location.state.nombreGuantillas[0];
+          if(valor==="mizuno"){
+            
+              this.setState({nombreGuantillas:this.props.location.state.nombreGuantillas});
+              this.setState({cantidad:this.props.location.state.cantidad});
+              this.setState({total:this.props.location.state.total});
+              this.setState({totalFinal:this.props.location.state.totalFinal});
+            
+          }
           
           
+                    
       } )
       .catch(error => {
           // console.log(error);
@@ -56,8 +74,13 @@ componentDidMount () {
   });
 }
 
+
+
+
+
+
 aumentaCantidad = (id) =>{
- 
+
   var q = [];
   var t=[];
   
